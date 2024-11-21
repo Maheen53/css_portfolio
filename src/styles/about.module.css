@@ -1,0 +1,129 @@
+/* Scoped styles for the About page */
+
+/* Container for the page */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/background.avif'); /* Background Image */
+  background-size: cover; /* Make the background image cover the entire container */
+  background-position: center center; /* Ensure the background is centered */
+  background-attachment: fixed; /* Optional: Make the background stay fixed on scroll */
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  max-width: full;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out; /* Fade in animation */
+}
+
+/* Image container */
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Styling the profile image */
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: scaleUp 1s ease-out; /* Image scaling animation */
+}
+
+/* Text container */
+.textContainer {
+  flex: 2;
+  padding: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Heading Styling */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* Paragraph/Text Styling */
+.description {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* Animation for fading in the container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for the profile image scaling up */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Animation for the text sliding in */
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for text fading in */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the image and text vertically */
+    padding: 20px;
+  }
+
+  .imageContainer {
+    margin-bottom: 20px;
+  }
+
+  .image {
+    width: 80%;
+    height: auto;
+  }
+
+  .textContainer {
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
