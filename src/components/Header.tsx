@@ -20,9 +20,9 @@ const Header: React.FC = () => {
       {/* Navigation for Desktop */}
       <nav className="nav">
         <ul className="nav-list">
-          <li><Link href="#home">Home</Link></li>
-          <li><Link href="/Aboutme">About</Link></li>
-          <li><Link href="#contact">Contact</Link></li>
+          <li><Link href="/Home">Home</Link></li>
+          <li><Link href="/About">About</Link></li>
+          <li><Link href="/Contact">Contact</Link></li>
         </ul>
       </nav>
 
@@ -34,9 +34,9 @@ const Header: React.FC = () => {
       {/* Sidebar for Mobile */}
       <div className={`sidebar ${menuOpen ? "active" : ""}`}>
         <ul className="sidebar-list">
-          <li><Link href="#home" onClick={toggleMenu}>Home</Link></li>
-          <li><Link href="/Aboutme" onClick={toggleMenu}>About</Link></li>
-          <li><Link href="#contact" onClick={toggleMenu}>Contact</Link></li>
+          <li><Link href="/Home" onClick={toggleMenu}>Home</Link></li>
+          <li><Link href="/About" onClick={toggleMenu}>About</Link></li>
+          <li><Link href="/Contact" onClick={toggleMenu}>Contact</Link></li>
         </ul>
       </div>
     </header>
